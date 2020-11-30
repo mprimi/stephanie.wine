@@ -1,0 +1,32 @@
+---
+permalink: /
+---
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="{{ site.description }}">
+        <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+        <link rel="shortcut icon" href="{{ site.favicon_img_path }}" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="{{ "css/front.css" | prepend: site.baseurl }}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" >
+    </head>
+    <body>
+        <div class="content">
+          <img src="{{ site.front_img_path }}" id="fullscreen">
+          <img src="{{ site.avatar_img_path }}" id="avatar">
+
+            <h1>{{ site.name }}</h1>
+            <h2>{{ site.subtitle }}</h2>
+
+                <ul>
+                  <li><a class="fa fa-2x fa-envelope" href="mailto:{{ site.email }}"><span class="description">hello@stephanie.wine</span></a></li>
+                  <li><a class="fa fa-2x fa-instagram" href="https://www.instagram.com/{{ site.instagram }}"><span class="description">Instagram</span></a></li>
+                </ul>
+        </div>
+    </body>
+</html>
